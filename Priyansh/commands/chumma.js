@@ -3,20 +3,21 @@ module.exports.config = {
 	name: "chumma",
     version: "1.0.1",
 	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
+	credits: "Priyansh", 
 	description: "hihihihi",
 	commandCategory: "no prefix",
-	usages: "🙂",
+	usages: "pizza",
     cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("😘")==0 || event.body.indexOf("kiss")==0 || event.body.indexOf("chumma")==0 || event.body.indexOf("chumu")==0) {
+	if (event.body.indexOf("umhh umhh")==0 || event.body.indexOf("😘")==0 || event.body.indexOf("chumma")==0 || event.body.indexOf("kiss me")==0) {
 		var msg = {
-				body: "Ummmmmmaaaahhhhhh😘😘 Baby 😘",
+				body: "umhhhh UMHHHH UMHHHH Baby 😘😘😘😘😋",
+				attachment: fs.createReadStream(__dirname + `/cache/kiss.gif`)
 			}
-			api.sendMessage( msg, threadID, messageID);
+			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😘", event.messageID, (err) => {}, true)
 		}
 	}
